@@ -1,0 +1,17 @@
+.portrait .portrait-section-images {
+  column-count: 4;
+  padding: 4rem 7rem;
+  display: block;
+  gap: 5px;
+}
+
+.portrait .portrait-section-images img {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  border-radius: 3px;
+}
+
+.portrait .portrait-section-images img:hover {
+  transform: scale(1.1);
+}

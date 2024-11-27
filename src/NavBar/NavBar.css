@@ -1,0 +1,106 @@
+#navBar {
+  width: 100%;
+  transition: width 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+#navBar.scrolled {
+  transition: all 0.5s ease;
+  width: 80%;
+  margin: 20px 10%;
+  /* transform: translateX(-50%); */
+  border: 3px solid black;
+  border-radius: 15px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position: fixed;
+  background-color: white;
+  box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.1),
+    10px 0 10px -10px rgba(0, 0, 0, 0.1), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navBar .logo {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navBar .logo::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navBar .logo:hover::before {
+  width: 100%; /* Expand to both left and right */
+  left: 0; /* Adjust the starting point */
+}
+
+.navBar .nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navBar .nav-links a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.navBar .nav-links a:active {
+  color: grey;
+}
+
+.navBar .nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navBar .nav-links a:hover::before {
+  width: 100%; /* Expand to both left and right */
+  left: 0; /* Adjust the starting point */
+}
+
+.navBar .social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBar .social-media a {
+  color: black;
+  font-size: 1.5rem;
+  opacity: 70%;
+}
+
+@media (max-width: 576px) {
+  .navBar .logo p {
+    font-size: 1rem;
+  }
+
+  .navBar .nav-links {
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+  }
+  .navBar .social-media {
+    display: none;
+  }
+}

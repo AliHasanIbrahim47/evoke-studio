@@ -1,0 +1,21 @@
+.images-container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.images-container .image {
+  width: 100%;
+  height: 20rem;
+  cursor: pointer;
+}
+
+.images-container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}

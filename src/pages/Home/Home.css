@@ -1,0 +1,387 @@
+.home .hero img {
+  width: 100%;
+  position: relative;
+}
+
+.home .hero .hero-content {
+  position: absolute;
+  top: 15%;
+  display: flex;
+  overflow: hidden;
+}
+
+.home .hero .hero-content h1 {
+  color: #757575;
+  font-size: 8rem;
+  font-weight: 100;
+  margin-left: 5rem;
+  transform: translateY(10%);
+  width: 40%;
+  letter-spacing: 1rem;
+}
+
+.home .hero .hero-images img {
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.home .hero .hero-images img:hover {
+  scale: 1.1;
+}
+
+.home .hero .hero-images {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-25%);
+}
+
+/* --- First Row --- */
+.home .hero .hero-images .first-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30rem;
+  animation: moveFirstRow 60s linear infinite;
+}
+.home .hero .hero-images .first-row img {
+  height: 100%;
+  width: 15%;
+}
+
+.home .hero .hero-images .first-row img:nth-child(1) {
+  width: 20%;
+  transform: translateX(-20%);
+}
+.home .hero .hero-images .first-row img:nth-child(2) {
+  width: 15%;
+  transform: translate(150%, 30%);
+}
+.home .hero .hero-images .first-row img:nth-child(3) {
+  width: 15%;
+  transform: translateX(100%);
+}
+
+/* --- Second Row --- */
+.home .hero .hero-images .second-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30rem;
+  width: 100%;
+  animation: moveSecondRow 25s linear infinite;
+}
+.home .hero .hero-images .second-row img {
+  height: 100%;
+  width: 15%;
+}
+
+.home .hero .hero-images .second-row img:nth-child(1) {
+  transform: translate(70%, 10%);
+}
+.home .hero .hero-images .second-row img:nth-child(2) {
+  transform: translateY(-30%);
+}
+.home .hero .hero-images .second-row img:nth-child(3) {
+  transform: translateY(40%);
+}
+
+/* --- Third Row --- */
+.home .hero .hero-images .third-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  animation: moveThirdRow 40s linear infinite;
+  z-index: 3;
+}
+.home .hero .hero-images .third-row img {
+  height: 100%;
+  width: 15%;
+}
+
+.home .hero .hero-images .third-row img:nth-child(1) {
+  transform: translate(-120%, -40%);
+  width: 25%;
+}
+.home .hero .hero-images .third-row img:nth-child(2) {
+  width: 25%;
+  transform: translate(-35%, 50%);
+}
+.home .hero .hero-images .third-row img:nth-child(3) {
+  width: 20%;
+  transform: translateX(160%);
+}
+
+.home .hero .hero-images img {
+  width: 50%;
+}
+
+/* Second Section - Portrait */
+
+.home .albums {
+  margin-top: -4px;
+  padding: 2rem 8rem;
+  width: 100%;
+  background: rgb(41, 41, 41);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 41, 41, 1) 0%,
+    rgba(121, 90, 67, 1) 28%,
+    rgba(162, 132, 109, 1) 57%,
+    rgba(152, 132, 119, 1) 100%
+  );
+
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  overflow: hidden;
+}
+
+.home .albums img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.home .albums .left-side {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.home .albums .left-side h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.home .albums .left-side p,
+.home .albums .right-side p {
+  font-size: 1.3rem;
+}
+
+.home .albums .right-side {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.home .albums .right-side .button {
+  display: flex;
+  justify-content: end;
+  height: 4rem;
+}
+
+.home .albums .right-side .button button {
+  width: 60%;
+  background-color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 3px solid #333;
+  color: white;
+}
+
+/* animation */
+
+.home .albums .left-side {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 1.5s;
+}
+
+.home .albums .right-side {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s, transform 1.5s;
+}
+
+.home .albums.show-side .left-side {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.home .albums.show-side .right-side {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*     ------------------ Third section ------------------     */
+
+.home .wedding {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.home .wedding .img {
+  position: relative;
+}
+
+.home .wedding img {
+  width: 100%;
+  transition: transform 9s ease-in-out;
+}
+
+.home .wedding img:hover {
+  transform: scale(1.1);
+}
+
+.home .wedding h1 {
+  font-size: 50px;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  color: white;
+  padding: 10px;
+  font-family: "adobe-garamond-pro", Georgia, serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* .home .wedding .title-and-button button {
+  position: absolute;
+  top: 60%;
+  right: 135px;
+  width: 18%;
+  padding: 1.2rem;
+  background-color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 3px solid #333;
+  color: white;
+} */
+.home .wedding .title-and-button button {
+  width: 60%;
+  background-color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 3px solid #333;
+  color: white;
+  height: 4rem;
+  margin-top: 20px;
+}
+
+/* animation for the hero section */
+@keyframes moveFirstRow {
+  0% {
+    transform: translateX(130%);
+  }
+  100% {
+    transform: translateX(-190%);
+  }
+}
+@keyframes moveSecondRow {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-180%);
+  }
+}
+@keyframes moveThirdRow {
+  0% {
+    transform: translateX(160%);
+  }
+  100% {
+    transform: translateX(-165%);
+  }
+}
+
+/*   ----- responsive section ----- */
+
+@media (max-width: 576px) {
+  .hero {
+    overflow: hidden;
+  }
+  .home .hero img {
+    height: 80vh;
+  }
+
+  .home .hero .hero-content {
+    width: 100%;
+  }
+
+  .home .hero .hero-content h1 {
+    font-size: 1rem;
+  }
+
+  .home .hero .hero-content .hero-images img {
+    width: 100%;
+  }
+  /* --- First Row --- */
+  .home .hero .hero-images .first-row img:nth-child(1) {
+    width: 25%;
+    transform: translateX(-20%);
+  }
+  .home .hero .hero-images .first-row img:nth-child(2) {
+    width: 25%;
+    transform: translate(150%, 30%);
+  }
+  .home .hero .hero-images .first-row img:nth-child(3) {
+    width: 25%;
+    transform: translateX(100%);
+  }
+
+  /* --- Second Row --- */
+  .home .hero .hero-images .second-row img:nth-child(1) {
+    width: 25%;
+    transform: translate(70%, 10%);
+  }
+  .home .hero .hero-images .second-row img:nth-child(2) {
+    width: 25%;
+    transform: translateY(-30%);
+  }
+  .home .hero .hero-images .second-row img:nth-child(3) {
+    width: 5%;
+    transform: translateY(40%);
+  }
+
+  /* --- Third Row --- */
+  .home .hero .hero-images .third-row img:nth-child(1) {
+    width: 25%;
+    transform: translate(-120%, -40%);
+  }
+  .home .hero .hero-images .third-row img:nth-child(2) {
+    width: 25%;
+    transform: translate(-35%, 50%);
+  }
+  .home .hero .hero-images .third-row img:nth-child(3) {
+    width: 25%;
+    transform: translateX(160%);
+  }
+
+  /* Second Section - Portrait */
+  .home .albums {
+    padding: 10px;
+  }
+  .home .albums .left-side h1 {
+    font-size: 1rem;
+  }
+
+  .home .albums .left-side p,
+  .home .albums .right-side p {
+    font-size: 10px;
+  }
+
+  .home .albums .right-side .button {
+    height: 2.2rem;
+  }
+
+  .home .albums .right-side .button button {
+    font-size: 13px;
+  }
+
+  /* Third Section - Wedding */
+  .home .wedding h1 {
+    font-size: 15px;
+    top: 30%;
+  }
+
+  .home .wedding .title-and-button button {
+    font-size: 12px;
+    height: 2.2rem;
+  }
+}
